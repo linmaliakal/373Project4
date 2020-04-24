@@ -3,6 +3,7 @@ package com.dress.model.dressdecorator;
 import com.dress.model.basicdress.*;
 
 public class DressDecorator implements Dress{
+	//using Decorator pattern with Decorator class that implements Dress Interface
 	
 	protected Dress dress;
 	
