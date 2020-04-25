@@ -7,9 +7,15 @@ public class DressDecorator implements Dress{
 	//using Decorator pattern with Decorator class that implements Dress Interface
 	
 	protected Dress dress;
-	
-	private int price;
-	
+	private double price;
+	@Override
+	public double getPrice() {
+		return price;
+	}
+	@Override
+	public void setPrice(double price) {
+		this.price = price;
+	}
 	public DressDecorator(Dress c) {
 		this.dress = c;
 	}
@@ -20,9 +26,11 @@ public class DressDecorator implements Dress{
 	}
 
 	@Override
-	public void accept(Visitor v) {
-		// TODO Auto-generated method stub
+	public void accept(ShoppingVisitor v) {
+		v.visit(this);
 		
 	}
+
+
 
 }
