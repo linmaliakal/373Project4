@@ -1,8 +1,6 @@
 package com.dress.model.visitor;
 
-import com.dress.model.basicdress.BasicDress;
 import com.dress.model.basicdress.Dress;
-import com.dress.model.dressdecorator.DressDecorator;
 
 public class ShoppingVisitorImpl implements ShoppingVisitor{
 	private double finalPrice;
