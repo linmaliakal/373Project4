@@ -11,15 +11,13 @@ import com.dress.model.dressdecorator.*;
 
 public class DecoratorTest {
 	
-	Dress casualDress = new CasualDress(new BasicDress());
 	Dress fancyDress = new FancyDress(new BasicDress());
-	Dress sportyDress = new SportyDress(new BasicDress());
+	Dress casualSportyDress = new CasualDress(new SportyDress(new BasicDress()));
 	
 	@BeforeEach
 	void setUp() throws Exception {
-		casualDress.assemble();
 		fancyDress.assemble();
-		sportyDress.assemble();
+		casualSportyDress.assemble();
 	}
 
 	@AfterEach
@@ -29,13 +27,13 @@ public class DecoratorTest {
 	@Test
 	void testOneDressFeature() {
 	//test for decorator pattern to see if one feature can be added to a basic dress
-	assertEquals("", "");
+	assertEquals(fancyDress, fancyDress);
 		
 	}
 	@Test
 	void testMultipleDressFeature() {
 	//test for decorator pattern to see if more than one feature can be added to a basic dress
-	assertEquals("", "");
+	assertEquals(casualSportyDress, casualSportyDress);
 		
 	}
 
