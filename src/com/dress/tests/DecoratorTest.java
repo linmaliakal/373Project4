@@ -1,5 +1,5 @@
 package com.dress.tests;
 
-public class DressTest {
+public class DecoratorTest {
 
 }
