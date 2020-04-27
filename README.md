@@ -19,3 +19,4 @@ System Design: We designed a system that classifies dresses by their style. Usin
 Patterns Used: Visitor and Decorator
 
 ## UML Diagram
+![UML Diagram for Dress Types P4](docs/UML.png)
